@@ -1,0 +1,15 @@
+name: Release 
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: test workflow
+        run: |
+            sleep 10;
+            echo 'success';
+                   
