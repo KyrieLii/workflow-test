@@ -25,6 +25,6 @@ jobs:
     steps:
       - name: test workflow
         run: |
-            sleep 10;
+            sleep 120;
             echo 'success';
                    
