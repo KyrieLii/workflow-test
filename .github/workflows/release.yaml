@@ -2,6 +2,21 @@ name: Release
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        type: choice
+        description: 'Release Version(next, beta, alpha, latest)'
+        required: true
+        default: 'next'
+        options:
+          - next
+          - beta
+          - alpha
+          - latest
+      branch:
+        description: 'Release Branch(confirm release branch)'
+        required: true
+        default: 'main'
 
 jobs:
   create:
