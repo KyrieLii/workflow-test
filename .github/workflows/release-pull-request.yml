@@ -1,0 +1,26 @@
+name: Release pull request
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        type: choice
+        description: 'Release Version(next, beta, alpha, latest)'
+        required: true
+        default: 'next'
+        options:
+          - next
+          - beta
+          - alpha
+          - latest
+
+jobs:
+  create:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: test workflow
+        run: |
+            sleep 120;
+            echo 'success';
+                   
